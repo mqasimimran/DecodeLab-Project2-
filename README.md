@@ -30,30 +30,3 @@ This API is built using **Django** and adheres strictly to the architectural con
       }
     ]
   }
-2. Create a UserEndpoint: /users/   Method: POST   Description: Unsafe, non-idempotent creation of a new user resource.  Request Body:JSON{
-  "name": "John Doe",
-  "email": "john@example.com"
-}
-Success Response: 201 Created   JSON{
-  "status": "success",
-  "data": {
-    "id": 2,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "role": "user"
-  }
-}
-Error Responses: * 400 Bad Request (Missing fields, invalid JSON, or semantic errors like duplicate emails).
- 🚀 Running the API LocallyEnsure Python is installed on your machine.
-Clone this repository and navigate to the project directory in your terminal.
-Install Django:
-pip install django
-Run the database migrations to set up the SQLite schema:
-Bash
-python manage.py migrate
-Start the local development server:
-Bash
-python manage.py runserver
-The API is now actively listening for requests.
-Architect: Muhammad Qasim Imran
-Developed for the DecodeLabs Full Stack Engineering Track.
